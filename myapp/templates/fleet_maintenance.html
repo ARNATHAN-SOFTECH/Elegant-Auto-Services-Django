@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Fleet Maintenance Sharjah | Elegant Way Auto Maint{% endblock %}
+
+{% block extra_css %}
+<style>
+    
+    .hero-banner {
+        height: 350px;
+        width: 100%;
+        background-image: url("{% static 'images/services11.jpg' %}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    
+    .repair-section {
+        background-color: #000000; 
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 60px 0;
+    }
+
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .main-title {
+        color: #FF8C00;
+        font-size: 2.0rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 40px;
+        border-bottom: 3px solid #FF8C00;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .text-content {
+        flex: 1;
+        min-width: 300px;
+        line-height: 1.8;
+    }
+
+    .text-content p {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+    }
+
+    .image-container {
+        flex: 1;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        border: 2px solid #FF8C00;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(255, 140, 0, 0.2);
+    }
+
+    .bottom-content p {
+        margin-bottom: 20px;
+    }
+
+    .cta-text {
+        font-weight: bold;
+        color: #ff8533; 
+        font-size: 1.1rem;
+        margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+        .content-wrapper {
+            flex-direction: column;
+        }
+        .main-title {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="hero-banner"></div>
+
+<section class="repair-section">
+    <div class="container">
+        <h1 class="main-title">One of the Top Fleet Maintenance Companies in Sharjah, UAE</h1>
+
+        <div class="content-wrapper">
+            <div class="text-content">
+                <p>Are you on the lookout for quality yet competitively priced fleet maintenance services in Sharjah? In that case, you are at the right place. At Elegant, we take vehicle maintenance and repairs very seriously, and have vowed to deliver dealership quality services without charging the exorbitant prices associated with them. Since our inception, it is our dedication that has played a vital role in our success as a provider of top-notch fleet maintenance solutions.</p>
+                <p>The success of your transportation business depends heavily on the performance delivered by your vehicles. For us, your success is ours, and for this reason, we put in our best to ascertain that your fleet performs at its best. We boast of the largest independent luxury car workshop, garage, and service center in Sharjah. Our state-of-the-art workshop is spread across 18,000 sqm area with a capacity of servicing and repairing 60 cars per day.</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/services12.png' %}" alt="Fleet Maintenance Sharjah">
+            </div>
+        </div>
+
+        <div class="bottom-content">
+            <p>Our team is comprised of highly qualified and certified technicians who are multilingual, so there is no need to worry about not being able to communicate your requirements. We hold over 18 years of experience to our credit, all through which we have serviced and repaired an array of car brands across the UAE. We understand your vehicles, and realize how important it is for you to ensure that your fleet delivers peak performance at all times.</p>
+
+            <p>We have nearly 15,000 different spare parts available in stock, and only use 100% quality parts. We also offer a 12 months warranty for both labor and parts. So if you are on the lookout for quality fleet maintenance services without having to bear exorbitant costs, then there is one name out there that you can truly rely on – Elegant!</p>
+            
+            <p class="cta-text">Get an appointment booked immediately with Elegant to get the testing and diagnosis done as soon as possible.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

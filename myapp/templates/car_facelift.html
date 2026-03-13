@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Car Facelift Services | Elegant Way Auto Maint{% endblock %}
+
+{% block extra_css %}
+<style>
+   
+    .hero-banner {
+        height: 350px;
+        width: 100%;
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("{% static 'images/services15.jpg' %}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* SECTION STYLES */
+    .repair-section {
+        background-color: #000000; 
+        color: #ffffff;
+        padding: 60px 0;
+    }
+
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .main-title {
+        color: #FF8C00;
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .sub-heading {
+        color: #FF8C00;
+        font-size: 1.8rem;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        border-left: 4px solid #FF8C00;
+        padding-left: 15px;
+    }
+
+    
+    .content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .text-content {
+        flex: 1;
+        min-width: 300px;
+        line-height: 1.8;
+    }
+
+    .image-container {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .image-container img {
+        width: 100%;
+        border: 2px solid #FF8C00;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(255, 140, 0, 0.2);
+    }
+
+    
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+    }
+
+    .service-card {
+        background: #1a1a1a;
+        padding: 25px;
+        border-left: 5px solid #FF8C00;
+        transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        background: #252525;
+    }
+
+    .service-card h4 {
+        color: #FF8C00;
+        margin-top: 0;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .main-title { font-size: 1.6rem; }
+        .hero-banner { height: 250px; }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="hero-banner"></div>
+
+<section class="repair-section">
+    <div class="container">
+        <div style="text-align: center;">
+            <h1 class="main-title">Facelift services: redefine your car's aesthetics</h1>
+            <p style="font-size: 1.2rem; color: #ebaf41; margin-bottom: 30px;">Experts of Car Face lift in the United Arab Emirates</p>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="text-content">
+                <p>At Elegant, we help you protect and enhance your vehicle’s value with expert car repair and facelift services. Safety and quality are at the core of everything we do. Our structural and aesthetic repairs improve overall safety while maintaining the highest dealership-quality standards.</p><br>
+                <p>Whether it’s a subtle enhancement or a complete transformation, our personalized style options allow you to customize your vehicle to reflect your personality, all handled by skilled experts with years of industry experience. Elegant combines premium service with competitive pricing across the UAE.</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/services16.jpg' %}" alt="Car Facelift Sharjah">
+            </div>
+        </div>
+
+        <h3 class="sub-heading">Our Comprehensive Range of Facelift Services</h3>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h4>Complete Vehicle Body Makeovers</h4>
+                <p>Transform your car’s appearance with a comprehensive facelift that includes everything from minor tweaks to major enhancements.</p>
+            </div>
+            <div class="service-card">
+                <h4>Front and Rear Bumper Redesign</h4>
+                <p>Upgrade your bumpers for a sleek and modern look that enhances both style and safety.</p>
+            </div>
+            <div class="service-card">
+                <h4>Lighting Modification</h4>
+                <p>Brighten up your car with advanced headlight and taillight installations or modern LED modifications.</p>
+            </div>
+            <div class="service-card">
+                <h4>Grille & Exterior Trim</h4>
+                <p>Give your car a bold look with redesigned grilles and trim elements that complement its design.</p>
+            </div>
+            <div class="service-card">
+                <h4>Wheel Upgrades</h4>
+                <p>Choose from a variety of premium alloy wheels to elevate your car’s style and performance.</p>
+            </div>
+            <div class="service-card">
+                <h4>Interior Refinement</h4>
+                <p>Elevate your driving experience with customized interior enhancements, including upholstery and premium materials.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

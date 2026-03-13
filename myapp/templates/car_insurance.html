@@ -1,0 +1,210 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Hero Banner - Car Insurance{% endblock %}
+
+{% block extra_css %}
+<style>
+    
+    .hero-banner {
+        height: 350px;
+        width: 100%;
+        background-image: url("{% static 'images/services17.jpg' %}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .repair-section {
+        background-color: #000000; 
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 60px 0;
+    }
+
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .main-title {
+        color: #FF8C00;
+        font-size: 2.0rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 40px;
+        border-bottom: 3px solid #FF8C00;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+
+    .sub-heading {
+        color: #FF8C00;
+        font-size: 1.8rem;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    
+    .content-wrapper {
+        display: flex;
+        align-items: center; 
+        gap: 30px;           
+        margin-bottom: 40px;
+    }
+
+
+    .text-content {
+        flex: 2; 
+    }
+
+
+    .image-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .image-container img {
+        width: 130%;        
+        max-width: 400px;   
+        height: auto;
+        border: 2px solid #FF8C00;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(255, 140, 0, 0.2);
+    }
+
+
+    @media (max-width: 768px) {
+        .content-wrapper {
+            flex-direction: column; 
+        }
+        
+        .image-container img {
+            max-width: 100%;
+        }
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .service-card {
+        background: #1a1a1a;
+        padding: 25px;
+        border-left: 5px solid #FF8C00;
+        transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        background: #252525;
+    }
+
+    .service-card h4 {
+        color: #FF8C00;
+        margin-top: 0;
+        font-size: 1.2rem;
+    }
+
+    
+    .floating-contact {
+        position: fixed;
+        right: 25px;
+        bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        z-index: 9999;
+    }
+
+    .float-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+        transition: all 0.3s ease;
+    }
+
+    .float-btn.whatsapp { background: #25D366; }
+    .float-btn.phone { background: linear-gradient(135deg, #EB952D, #e77f00); }
+
+    @media (max-width: 768px) {
+        .content-wrapper { flex-direction: column; }
+        .floating-contact { right: 15px; bottom: 80px; }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="hero-banner"></div>
+
+<section class="repair-section">
+    <div class="container">
+        <div style="text-align: center;">
+            <h1 class="main-title">fastest car insurance that fits your needs</h1>
+            <p style="font-size: 1.2rem; color: #ebaf41; margin-bottom: 30px;">Leading Car Insurance Provider in Sharjah</p>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="text-content">
+                <p>At Elegant, we offer the most beneficial car insurance plans designed to protect you from unexpected repair bills caused by road accidents or minor collisions, while safeguarding your hard-earned investment. Whether you own a supreme luxury vehicle or a premium car, our insurance solutions provide reliable protection that lets you drive with complete peace of mind, knowing your vehicle is covered when it matters most.</p><br>
+                <p>Our flexible car insurance plans allow you to choose the coverage level that best suits your needs and budget, without compromising on quality. Enjoy fast, easy, and convenient policy issuance, coverage for vehicles up to 8 years old at Class-A certified garages, and access to comprehensive plans packed with extra benefits that go beyond standard offerings in the UAE.</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/services18.jpg' %}" alt="Car Paint Repair Sharjah">
+            </div>
+        </div>
+
+        <h3 class="sub-heading">TOP CAR INSURANCE SERVICES</h3>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h4>Instant car insurance quotes</h4>
+                <p>Our car insurance quotes are most competitively priced with maximum benefits when compared to others in the UAE</p>
+            </div>
+            <div class="service-card">
+                <h4>Easy claims</h4>
+                <p>Our insurance claims process is instant and hassle free, so any mishaps to your car during the insurance period can be handled easier when you submit the claim.</p>
+            </div>
+            <div class="service-card">
+                <h4>Competitive car insurance pricing</h4>
+                <p>We are flexible that you can choose the courage level of your insurance that suits all your needs and budget.</p>
+            </div>
+            <div class="service-card">
+                <h4> 24/7 Roadside & towing supports</h4>
+                <p>During any accidents or mishaps we are here to support you with our professional recovery team .</p>
+            </div>
+            <div class="service-card">
+                <h4>Professional customer support</h4>
+                <p>Our highly qualified in house customer support team will answer all your queries and provide you perfect guidance throughout the warranty period.</p>
+            </div>
+            <div class="service-card">
+                <h4>Service at class A Garage</h4>
+                <p>To Serve you better, all your repairs & maintenence works are carried out in a certified class A garage</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="floating-contact">
+    <a href="https://wa.me/+71554663737" target="_blank" class="float-btn whatsapp" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="tel:+71554663737" class="float-btn phone" aria-label="Call Us">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+</div>
+{% endblock %}

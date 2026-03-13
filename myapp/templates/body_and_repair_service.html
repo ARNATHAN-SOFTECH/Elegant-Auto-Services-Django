@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Body & Paint Services | Elegant Way Auto Maint{% endblock %}
+
+{% block extra_css %}
+<style>
+    
+    .hero-banner {
+        height: 350px;
+        width: 100%;
+        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("{% static 'images/services13.jpg' %}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    
+    .repair-section {
+        background-color: #000000; 
+        color: #ffffff;
+        padding: 60px 0;
+    }
+
+    .main-title {
+        color: #FF8C00;
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .sub-heading {
+        color: #FF8C00;
+        font-size: 1.8rem;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        border-left: 5px solid #FF8C00;
+        padding-left: 15px;
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .text-content {
+        flex: 1.5;
+        min-width: 300px;
+        line-height: 1.8;
+    }
+
+    .image-container {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .image-container img {
+        width: 100%;
+        border: 2px solid #FF8C00;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(255, 140, 0, 0.2);
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+    }
+
+    .service-card {
+        background: #1a1a1a;
+        padding: 25px;
+        border-left: 5px solid #FF8C00;
+        transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        background: #252525;
+    }
+
+    .service-card h4 {
+        color: #FF8C00;
+        margin-bottom: 12px;
+        font-size: 1.25rem;
+    }
+
+    @media (max-width: 768px) {
+        .main-title { font-size: 1.6rem; }
+        .hero-banner { height: 250px; }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="hero-banner"></div>
+
+<section class="repair-section">
+    <div class="container">
+        <div style="text-align: center;">
+            <h1 class="main-title">Reliable & reputed body & paint workshop in uae</h1>
+            <p style="font-size: 1.2rem; color: #d0980b; margin-bottom: 30px;">Experts of Car Scratch Repair in the United Arab Emirates</p>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="text-content">
+               <p> Elegant offers dealership-quality body repair services tailored specifically for luxury car owners who demand excellence without the premium markup. With over 18 years of industry-backed experience, our Sharjah-based team specializes in maintaining your vehicle’s showroom glow through precision car scratch and dent repair, as well as specialized smart paint repair. We bridge the gap between high-end craftsmanship and market-competitive pricing, ensuring that every repair meets rigorous international standards. Whether you are dealing with minor cosmetic imperfections or require significant structural restoration, our experts utilize advanced techniques to deliver seamless results that protect both the aesthetics and the resale value of your investment.</p><br>
+                <p>Understanding that time is a luxury for our clients, we provide a seamless service experience that extends across the entire UAE. If you are too busy to visit our facility, we offer a convenient nationwide vehicle pickup and delivery service, bringing our elite automotive care directly to your doorstep regardless of your location. Our commitment to excellence is rooted in a philosophy of "Trusted Customer Service," where transparent communication and superior workmanship define every interaction. At Elegant, we don’t just repair cars; we provide a stress-free, premium solution that combines the reliability of a dealership with the agility and affordability of a dedicated specialist.</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/services14.jpg' %}" alt="Car Paint Repair Sharjah">
+            </div>
+        </div>
+
+        <h3 class="sub-heading">Our Range of Body, Paint & Dent Removal Services</h3>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h4>Major and Minor collision repair</h4>
+                <p>From major structural fixes to minor scratch repair and smart dent removal, we fix your vehicle's body with factory precision.</p>
+            </div>
+            <div class="service-card">
+                <h4>Complete Paint Jobs</h4>
+                <p>Professional paint jobs carried out in a dust-free environment using premium European paints to restore that showroom shine.</p>
+            </div>
+            <div class="service-card">
+                <h4>Polishing & Detailing</h4>
+                <p>High-precision detailing to bring out the depth and clarity of your vehicle's exterior finish.</p>
+            </div>
+            <div class="service-card">
+                <h4>Wheel Rim Restoration</h4>
+                <p>Painting, restoration, and touch-ups for worn or curbed rims to make them look brand new again.</p>
+            </div>
+            <div class="service-card">
+                <h4>Caliper Painting</h4>
+                <p>Custom caliper painting to add a sporty, high-end aesthetic touch to your luxury vehicle.</p>
+            </div>
+            <div class="service-card">
+                <h4>Paintless Dent Removal (PDR)</h4>
+                <p>Removing dents without affecting the original factory paint, preserving your car’s value and finish.</p>
+            </div>
+            <div class="service-card">
+                <h4>Window Tinting</h4>
+                <p>Professional heat-rejection window films to protect your interior and keep your cabin cool in the UAE heat.</p>
+            </div>
+            <div class="service-card">
+                <h4>Body Kit Installation</h4>
+                <p>Expert fitment of aerodynamic body kits and aesthetic accessories to give your car a personalized look.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

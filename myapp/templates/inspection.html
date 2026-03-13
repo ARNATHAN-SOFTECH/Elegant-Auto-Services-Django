@@ -1,0 +1,348 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Pre Purchase Car Inspection | Elegant Way Auto Maint{% endblock %}
+
+{% block content %}
+
+<style>
+/* ===============================
+   SERVICE HERO
+================================ */
+.service-hero {
+    height: 350px;
+    background: url("{% static 'images/inspection.png' %}") center/cover no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(0,0,0,0.6);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    color: #ddd;
+}
+
+.breadcrumb a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ===============================
+   SERVICE DETAIL
+================================ */
+.service-detail {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.service-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+
+/* HEADINGS */
+.service-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.service-subtitle {
+    font-size: 18px;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* CONTENT */
+.service-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 18px;
+}
+
+.service-content h3 {
+    font-size: 24px;
+    margin-top: 45px;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--primary);
+    padding-left: 12px;
+    color: #111;
+}
+
+/* LIST */
+.service-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.service-content ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+}
+
+.service-content ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* HIGHLIGHTS */
+.service-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 35px 0;
+    font-weight: 500;
+}
+
+/* IMAGE */
+.service-image {
+    position: sticky;
+    top: 120px;
+}
+
+.service-image img {
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-radius: 2px;
+}
+
+.image-caption {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* CTA BOX */
+.service-cta {
+    margin-top: 40px;
+    padding: 30px;
+    background: #f8f8f8;
+    border-left: 4px solid var(--primary);
+    margin-bottom: 50px;
+}
+
+.service-cta h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.service-cta a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 30px;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.service-quick-points {
+    margin-top: 15px;
+    padding: 20px;
+    background: #ffffff;
+}
+
+.service-quick-points h4 {
+    font-size: 24px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--primary);
+    padding-left: 12px;
+    color: #111;
+}
+
+.service-quick-points ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-quick-points ul li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #333;
+}
+
+.service-quick-points ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-image {
+        position: static;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+}
+</style>
+
+<!-- HERO -->
+<section class="service-hero">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h1>Pre Purchase Car Inspection</h1>
+            <p>Know the real condition before you invest in a pre-owned car</p>
+            <div class="breadcrumb">
+                <a href="{% url 'index' %}">Home</a> /
+                <a href="{% url 'services' %}">Services</a> /
+                <span>Pre Purchase Inspection</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICE DETAIL -->
+<section class="service-detail">
+    <div class="service-container">
+
+        <div class="service-grid">
+
+            <!-- LEFT CONTENT -->
+            <div class="service-content">
+
+                <h1 class="service-title">
+                    Pre Purchase Luxury Car Inspection Services in  Sharjah
+                </h1>
+
+                <div class="service-subtitle">
+                    Make an informed decision before buying a pre-owned car
+                </div>
+
+                <p>
+                    Purchasing a pre-owned luxury car can save you money — but only if the
+                    vehicle is in good condition. Hidden mechanical, electrical, or structural
+                    issues can turn your purchase into an expensive mistake.
+                </p>
+
+                <p>
+                    At <strong>Elegant Way Auto Services</strong>, we offer comprehensive
+                    pre-purchase car inspection services that help you evaluate the true
+                    condition of the vehicle before you buy.
+                </p>
+
+                <h3>Why Pre-Purchase Inspection Is Important</h3>
+                <ul>
+                    <li>Avoid unexpected repair costs</li>
+                    <li>Detect accident or repaint history</li>
+                    <li>Ensure engine and transmission health</li>
+                    <li>Verify electronics and AC performance</li>
+                    <li>Drive with complete peace of mind</li>
+                </ul>
+
+                <h3>Elegant Way Auto Inspection Checklist</h3>
+                <ul>
+                    <li>Exterior paint and body condition inspection</li>
+                    <li>Electronics, infotainment & power controls testing</li>
+                    <li>Air conditioning performance evaluation</li>
+                    <li>Engine oil, suspension & AC leakage check</li>
+                    <li>Battery health and terminal inspection</li>
+                    <li>Noise diagnosis from engine, brakes & suspension</li>
+                    <li>Engine performance, vibration & smoke analysis</li>
+                </ul>
+
+                <p>
+                    Our inspection process is detailed and technical. We use advanced
+                    diagnostic tools and expert analysis to uncover issues that may not
+                    be visible during a normal test drive.
+                </p>
+
+               
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="service-image">
+                <img src="{% static 'images/g15.png' %}" alt="Pre Purchase Car Inspection">
+                <div class="image-caption">
+                    Comprehensive inspection using advanced diagnostics
+                </div>
+
+                <div class="service-quick-points">
+                    <h4>Why Choose Elegant Way?</h4>
+                    <ul>
+                        <li>Luxury car specialists</li>
+                        <li>Modern diagnostic equipment</li>
+                        <li>Detailed inspection reports</li>
+                        <li>Trusted & transparent service</li>
+                    </ul>
+                </div>
+
+                <div class="service-quick-points">
+                    <h4>Who Benefits?</h4>
+                    <ul>
+                        <li>Pre-owned car buyers</li>
+                        <li>Luxury car sellers</li>
+                        <li>Dealership resale verification</li>
+                        <li>High-value car transactions</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="service-cta-wrapper">
+                    <div class="service-container">
+                        <div class="service-cta">
+                            <h4>Planning to Buy a Used Car?</h4>
+                            <p>Let Elegant Way Auto inspect it before you decide.</p>
+                            <a href="{% url 'home' %}#book-for-appointment">Book An Appointment</a>
+                        </div>
+                    </div>
+                </section>
+
+{% endblock %}

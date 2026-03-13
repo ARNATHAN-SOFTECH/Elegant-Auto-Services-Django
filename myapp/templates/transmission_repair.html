@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}One of the Top Fleet Maintenence Companies in Sharjah, UAE{% endblock %}
+
+{% block extra_css %}
+<style>
+   
+    .hero-banner {
+        height: 350px;
+        width: 100%;
+        background-image: url("{% static 'images/service.png' %}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    
+    .repair-section {
+        background-color: #000000; 
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 60px 0;
+    }
+
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .main-title {
+        color: #FF8C00;
+        font-size: 2.0rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 40px;
+        border-bottom: 3px solid #FF8C00;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .text-content {
+        flex: 1;
+        min-width: 300px;
+        line-height: 1.8;
+    }
+
+    .text-content p {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+    }
+
+    .image-container {
+        flex: 1;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        border: 2px solid #FF8C00;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(255, 140, 0, 0.2);
+    }
+
+    .bottom-content p {
+        margin-bottom: 20px;
+    }
+
+    .cta-text {
+        font-weight: bold;
+        color: #ff8533; 
+        font-size: 1.1rem;
+        margin-top: 30px;
+    }
+
+    
+    @media (max-width: 768px) {
+        .content-wrapper {
+            flex-direction: column;
+        }
+        .main-title {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="hero-banner"></div>
+
+<section class="repair-section">
+    <div class="container">
+        <h1 class="main-title">TRANSMISSION REPAIR – Trusted Luxury Car Auto Repair Shop in Sharjah, UAE</h1>
+
+        <div class="content-wrapper">
+            <div class="text-content">
+                <p>The transmission is one of the most overlooked yet essential components of a vehicle. It is directly connected to the engine and transforms the engine’s combustion power into the momentum that drives the wheels, ensuring optimal performance and fuel efficiency.</p>
+                <p>Since the transmission plays a vital role in your car’s overall efficiency, make sure to schedule regular servicing and keep it in top condition with the expert technicians at Elegant Way Auto Maint.</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/service1.jpg' %}" alt="Fleet Maintenance Sharjah">
+            </div>
+        </div>
+
+        <div class="bottom-content">
+            <p>If you notice grinding, ticking, or whining noises while your vehicle is in neutral, experience slipping gears, see your engine warning light illuminated, or feel shaking when changing gears, these could be warning signs of transmission problems—often caused by low or leaking transmission fluid. Ignoring these symptoms may lead to costly repairs, so early diagnosis is key. We recommend servicing your transmission approximately every 80,000 km and always using manufacturer-recommended, premium-quality transmission fluid to ensure peak performance</p>
+            <p>At Elegant Way Auto Maint, we help you avoid unnecessary breakdowns with comprehensive transmission services, including complete fluid flushing and replacement using advanced diagnostic tools and high-end equipment. Our experts carefully remove old fluid, thoroughly clean the system, and refill it with top-grade fluid to restore smooth operation and extend the life of your vehicle. We are committed to delivering exceptional service, fast turnaround times, and true value for your investment—because your luxury car deserves nothing less than excellence.</p>
+            
+            <p class="cta-text">Get an appointment booked immediately with Elegant to get the testing and diagnosis done as soon as possible.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

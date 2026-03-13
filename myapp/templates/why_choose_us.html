@@ -1,0 +1,306 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Why Choose Elegant | Sharjah's Leading Car Service{% endblock %}
+
+{% block extra_css %}
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+    
+    :root {
+        --primary-red: #cd4507;
+        --dark-bg: #1A1A1A;
+        --light-grey: #F5F5F5;
+        --transition: all 0.3s ease-in-out;
+    }
+
+    h1, h2, h3 {
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+    }
+
+    
+    .why-us-hero {
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                    url("{% static 'images/whymain.jpg' %}");
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+    }
+
+    .hero-content h1 { font-size: 3.5rem; margin-bottom: 10px; letter-spacing: 2px; }
+    .hero-content span { color: orangered; }
+
+    .stats-bar {
+        background: var(--dark-bg);
+        padding: 50px 0;
+        color: #fff;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: -50px auto 0 auto;
+        width: 90%;
+        border-bottom: 5px solid var(--primary-red);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .stat-item { text-align: center; padding: 20px; }
+    .stat-item h2 { font-size: 2.5rem; color: orangered; margin: 0; }
+
+    .why-container {
+        display: flex;
+        padding: 80px 60px;
+        gap: 40px;
+        background: #010101;
+    }
+
+    .why-left { width: 28%; }
+    .why-item {
+        background: #2b2929;
+        padding: 22px 25px;
+        margin-bottom: 18px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #fafbfd;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .why-item:hover, .why-item.active { background: #ba3003; color: #fff; }
+
+    .why-image { width: 34%; }
+    .why-image img { width: 100%; height: 100%; object-fit: cover; }
+
+    .why-right { width: 38%; }
+    .why-right h2 { font-size: 36px; color: #c55103; margin-bottom: 20px; }
+    .why-right p { color: #ede7e7; line-height: 1.8; margin-bottom: 25px; }
+    .why-right ul { list-style: none; padding: 0; }
+    .why-right ul li { font-size: 17px; margin-bottom: 15px; color: #beb8b8; }
+    .why-right ul li::before { content: "✔"; color: green; margin-right: 10px; }
+
+    .strengths-container {
+        padding: 80px 10%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        background-color: #000000; 
+    }
+
+    .strength-card {
+        background: #1A1A1A;      
+        padding: 40px;
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+    }
+
+    .strength-card:hover {
+        transform: translateY(-10px);
+        border-left: 8px solid orangered; 
+        background: #252525;          
+    }
+
+    .strength-card i { font-size: 3rem; color: orangered; margin-bottom: 20px; }
+    .strength-card h3 { color: #FFFFFF; }
+    .strength-card p { color: #CCCCCC; line-height: 1.6; }
+
+    .trust-section { display: flex; flex-wrap: wrap; background: var(--dark-bg); color: #fff; align-items: center; }
+    .trust-image {
+        flex: 1;
+        min-width: 350px;
+        height: 500px;
+        background: url("{% static 'images/why5.jpg' %}");
+        background-size: cover;
+        background-position: center;
+    }
+    .trust-text { flex: 1; padding: 60px; min-width: 350px; }
+    .trust-text span { color: orangered; }
+    .trust-list { list-style: none; padding: 0; }
+    .trust-list li { margin-bottom: 15px; display: flex; align-items: center; }
+    .trust-list li i { color: green; margin-right: 15px; }
+
+    .btn-revv {
+        background: orangered;
+        color: #000; 
+        padding: 18px 40px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 30px;
+        text-transform: uppercase;
+        border: 2px solid orangered;
+        transition: all 0.3s ease; 
+    }
+
+    .btn-revv:hover {
+        background-color: transparent;
+        color: orangered;
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+        .why-container { flex-direction: column; padding: 40px 20px; }
+        .why-left, .why-image, .why-right { width: 100%; }
+        .hero-content h1 { font-size: 2.5rem; }
+    }
+
+    body {
+    background-color: #000000;
+}
+
+</style>
+{% endblock %}
+
+{% block content %}
+    <section class="why-us-hero">
+        <div class="hero-content" data-aos="zoom-out">
+            <h1>WHY <span>ELEGANT</span>?</h1>
+            <p>Experience Precision. Feel the Power. Trust the Experts.</p>
+        </div>
+    </section>
+
+    <div class="stats-bar" data-aos="fade-up">
+        <div class="stat-item">
+            <h2>15+</h2>
+            <p>Years Experience</p>
+        </div>
+        <div class="stat-item">
+            <h2>50k+</h2>
+            <p>Cars Serviced</p>
+        </div>
+        <div class="stat-item">
+            <h2>100%</h2>
+            <p>Genuine Parts</p>
+        </div>
+        <div class="stat-item">
+            <h2>24/7</h2>
+            <p>Support</p>
+        </div>
+    </div>
+
+    <div class="why-container">
+        <div class="why-left">
+            <div class="why-item active" onclick="changeWhy(0,this)">
+                <span>🚗</span> Trusted Expertise
+            </div>
+            <div class="why-item" onclick="changeWhy(1,this)">
+                <span>⚙️</span> Advanced Diagnostics
+            </div>
+            <div class="why-item" onclick="changeWhy(2,this)">
+                <span>🛞</span> Genuine Spare Parts
+            </div>
+            <div class="why-item" onclick="changeWhy(3,this)">
+                <span>🛢️</span> Transparent Pricing
+            </div>
+        </div>
+
+        <div class="why-image">
+            <img id="whyImg" src="{% static 'images/why1.jpg' %}" alt="Expertise">
+        </div>
+
+        <div class="why-right">
+            <h2 id="whyTitle">15 Years Of Trusted Auto Expertise</h2>
+            <p id="whyText">
+                With over 15 years of experience, we deliver reliable and professional
+                auto care using modern tools and certified technicians.
+            </p>
+            <ul id="whyList">
+                <li>Skilled & Certified Mechanics</li>
+                <li>Customer Satisfaction Guaranteed</li>
+                <li>Latest Automotive Technology</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="strengths-container">
+        <div class="strength-card" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-tools"></i>
+            <h3>Expert Technicians</h3>
+            <p>Our team consists of certified specialists trained to handle luxury brands and daily drivers with precision.</p>
+        </div>
+
+        <div class="strength-card" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-microchip"></i>
+            <h3>Advanced Diagnostics</h3>
+            <p>We use the latest AI-driven diagnostic tools to identify issues accurately, saving you time and money.</p>
+        </div>
+
+        <div class="strength-card" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-snowflake"></i>
+            <h3>Desert-Ready Care</h3>
+            <p>Specialized cooling and engine protection services designed specifically for the Sharjah climate.</p>
+        </div>
+    </section>
+
+    <section class="trust-section">
+        <div class="trust-image" data-aos="fade-right"></div>
+        <div class="trust-text" data-aos="fade-left">
+            <h2>The <span>Elegant </span>Promise</h2>
+            <p>We don't just fix cars; we build long-term relationships based on transparency and excellence.</p>
+            <ul class="trust-list">
+                <li><i class="fas fa-check-circle"></i> Transparent Pricing - No Hidden Charges</li>
+                <li><i class="fas fa-check-circle"></i> Complimentary Pickup & Drop-off in Sharjah</li>
+                <li><i class="fas fa-check-circle"></i> 12-Month Warranty on All Major Repairs</li>
+                <li><i class="fas fa-check-circle"></i> Detailed Digital Inspection Reports</li>
+            </ul>
+            <a href="{% url 'home' %}#book-for-appointment" class="btn-revv">Book An Appointment</a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000, once: true });
+
+    const data = [
+        {
+            img: "{% static 'images/why1.jpg' %}",
+            title: "15 Years Of Trusted Auto Expertise",
+            text: "With over 15 years of experience, we deliver reliable and professional auto care using modern tools and certified technicians.",
+            list: ["Skilled & Certified Mechanics", "Customer Satisfaction Guaranteed", "Latest Automotive Technology"]
+        },
+        {
+            img: "{% static 'images/why2.jpg' %}",
+            title: "Advanced Diagnostic Technology",
+            text: "We use state-of-the-art diagnostic tools to identify issues accurately and fix them efficiently.",
+            list: ["Accurate Fault Detection", "Reduced Repair Time", "Modern Equipment"]
+        },
+        {
+            img: "{% static 'images/why3.jpg' %}",
+            title: "100% Genuine Spare Parts",
+            text: "Only authentic and manufacturer-approved spare parts are used to ensure long-lasting performance.",
+            list: ["Warranty-Backed Parts", "High Quality Assurance", "Improved Vehicle Life"]
+        },
+        {
+            img: "{% static 'images/why4.jpg' %}",
+            title: "Honest & Transparent Pricing",
+            text: "No hidden costs. We explain every repair clearly and provide fair pricing upfront.",
+            list: ["Clear Cost Breakdown", "Affordable Packages", "Trusted Service"]
+        }
+    ];
+
+    function changeWhy(index, el) {
+        document.getElementById("whyImg").src = data[index].img;
+        document.getElementById("whyTitle").innerText = data[index].title;
+        document.getElementById("whyText").innerText = data[index].text;
+
+        let listHTML = "";
+        data[index].list.forEach(item => {
+            listHTML += `<li>${item}</li>`;
+        });
+        document.getElementById("whyList").innerHTML = listHTML;
+
+        document.querySelectorAll(".why-item").forEach(i => i.classList.remove("active"));
+        el.classList.add("active");
+    }
+</script>
+{% endblock %}

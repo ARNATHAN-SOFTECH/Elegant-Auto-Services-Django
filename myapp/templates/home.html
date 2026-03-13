@@ -1,0 +1,237 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Elegant Way Automaint{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    
+{% endblock %}
+
+{% block content %}
+<section class="video-hero">
+
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="{% static 'video/car_service.mp4' %}" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div class="video-overlay">
+        <h1>Trusted Auto <br>Repair Service</h1>
+        <p>Precision Service you can rely on</p>
+        <a href="#book-for-appointment" class="btn-appointment">Book Appointment</a>
+    </div>
+
+</section>
+
+
+
+<section class="highlight-section">
+
+    <div class="highlight-container">
+
+        <div class="highlight-image" data-aos="fade-right">
+            <img src="{% static 'images/img1.jpg' %}" alt="Car Service">
+        </div>
+
+        <div class="highlight-content">
+
+            <h1 data-aos="fade-up">
+                <span class="orange-text">Elegant Car Services</span> 
+                Driven by Quality, <br>Powered by Trust
+            </h1>
+
+            <p data-aos="fade-up" data-aos-delay="100">
+                Welcome to Elegant Car Services, your trusted destination for professional car repair and servicing. We are a team of skilled automotive experts committed to delivering high-quality, reliable solutions for every vehicle we service. Using modern diagnostic technology and genuine parts, our experienced technicians provide precise and transparent service you can rely on.
+            </p>
+
+            <div class="highlight-points">
+                <div class="point" data-aos="fade-left" data-aos-delay="200">
+                    <span class="number">01</span>
+                    <div>
+                        <h4>Certified Technicians</h4>
+                        <p>Highly trained professionals with industry experience</p>
+                    </div>
+                </div>
+
+                <div class="point" data-aos="fade-left" data-aos-delay="300">
+                    <span class="number">02</span>
+                    <div>
+                        <h4>Advanced Diagnostics</h4>
+                        <p>Modern tools for accurate fault detection</p>
+                    </div>
+                </div>
+
+                <div class="point" data-aos="fade-left" data-aos-delay="400">
+                    <span class="number">03</span>
+                    <div>
+                        <h4>Customer Satisfaction</h4>
+                        <p>Trusted by thousands of happy customers</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="services-section">
+    <div class="services-header" data-aos="fade-down">
+        <span class="section-title">OUR SERVICES</span>
+        <h2>Explore Our Services</h2>
+    </div>
+
+    <div class="services-grid">
+        <div class="service-card bg-img" 
+             data-aos="fade-up" data-aos-delay="100"
+             style="background-image: url('{% static 'images/img2.jpg' %}')">
+            <div class="service-content">
+                <h3>Mechanical Services</h3>
+            </div>
+        </div>
+
+        <div class="service-card bg-img" 
+             data-aos="fade-up" data-aos-delay="200"
+             style="background-image: url('{% static 'images/img3.jpg' %}')">
+            <div class="service-content">
+                <h3>Electrical Services</h3>
+            </div>
+        </div>
+
+        <div class="service-card bg-img" 
+             data-aos="fade-up" data-aos-delay="300"
+             style="background-image: url('{% static 'images/img4.jpg' %}')">
+            <div class="service-content">
+                <h3>Programming & Retrofit</h3>
+            </div>
+        </div>
+
+        <div class="service-card bg-img" 
+             data-aos="fade-up" data-aos-delay="100"
+             style="background-image: url('{% static 'images/img5.jpg' %}')">
+            <div class="service-content">
+                <h3>Engine Repair Services</h3>
+            </div>
+        </div>
+
+        <div class="service-card bg-img" 
+             data-aos="fade-up" data-aos-delay="200"
+             style="background-image: url('{% static 'images/img6.jpg' %}')">
+            <div class="service-content">
+                <h3>Service Packages</h3>
+            </div>
+        </div>
+
+        <div class="service-card bg-img" 
+             data-aos="fade-up" data-aos-delay="300"
+             style="background-image: url('{% static 'images/img7.jpg' %}')">
+            <div class="service-content">
+                <h3>Extended Warranty</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="book-for-appointment" class="book-for-appointment">
+    <div class="booking-container">
+
+    
+    <div class="content-section" data-aos="fade-right">
+        <h1>Precision Service <br><span style="color: var(--brand-orange);">Proven Excellence</span></h1>
+        <p>
+            Our certified experts utilize cutting-edge technology to identify and resolve performance issues before they become costly repairs. We take pride in delivering meticulous service that extends the lifespan of your engine and enhances fuel economy.
+        </p>
+    </div>
+
+    <div class="form-section" data-aos="fade-left">
+        <h2>Book For Appointment</h2>
+        {% if form.errors %}
+    <div style="color:red;">
+        {{ form.errors }}
+    </div>
+{% endif %}
+
+        <form method="POST" action="{% url 'book_appointment' %}" class="booking-form">
+
+    {% csrf_token %}
+
+    <div class="form-row">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+    </div>
+
+    <div class="form-row">
+        <select name="service" required>
+            <option value="" disabled selected>Select A Package</option>
+            <option value="Basic Care">Basic Care</option>
+            <option value="Standard Maintenance">Standard Maintenance</option>
+            <option value="Premium Full Care">Premium Full Care</option>
+            <option value="other">Other</option>
+        </select>
+
+        <input type="text"
+       name="service_date"
+       id="service_date"
+       class="date-input"
+       placeholder="Service Date"
+       onfocus="this.type='date'; this.min=new Date().toISOString().split('T')[0]"
+       required>
+    </div>
+
+    <textarea name="message"
+              class="form-textarea"
+              placeholder="Special Request (Optional)">
+    </textarea>
+
+    <button type="submit" class="btn-book">Book Now</button>
+</form>
+
+    </div>
+
+</div>
+
+
+<div class="container py-5">
+        <h2 class="section-title1">What Our <span>Customers Say</span></h2>
+
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">“Excellent service, honest pricing, and professional staff—my car runs perfectly after the repair and I highly recommend them!"</p>
+                <span class="customer-name">— Rahul Nair</span>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">“I’ve serviced my car here multiple times, and they never disappoint. From engine check to full inspection, everything was handled professionally."</p>
+                <span class="customer-name">— Fathima KM</span>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">“I had a great experience with this workshop. The team clearly explained the issues with my car and fixed everything on time"</p>
+                <span class="customer-name">— Rajeev P</span>
+            </div>
+        </div>
+
+        <a href="{% url 'review_page' %}" class="view-all-btn">View All Reviews</a>
+    </div>
+
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, 
+    once: true,   
+  });
+</script>
+{% endblock %}
+
+

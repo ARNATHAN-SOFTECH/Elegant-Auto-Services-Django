@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Gallery | Elegant Way Auto Maint{% endblock %}
+
+{% block content %}
+
+<style>
+
+.gallery-page {
+    padding: 30px 10px;
+    background-color: #000;  
+}
+
+.gallery-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.gallery-header h1 {
+    font-size: 36px;
+    color: #ff7a00;   
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+.gallery-header p {
+    color: #ffffff;   
+    font-size: 16px;
+}
+
+
+.gallery-grid {
+    column-count: 3;
+    column-gap: 15px;
+}
+
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.lightbox.show {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 8px;
+}
+
+
+.lightbox-caption {
+    position: absolute;
+    bottom: 30px;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 34px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    font-size: 48px;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    transform: translateY(-50%);
+}
+
+.lightbox-nav.prev { left: 20px; }
+.lightbox-nav.next { right: 20px; }
+
+.lightbox-nav:hover {
+    color: #EB952D;
+}
+
+
+@media (max-width: 1024px) { .gallery-grid { column-count: 3; } }
+@media (max-width: 768px)  { .gallery-grid { column-count: 2; } }
+@media (max-width: 480px)  { .gallery-grid { column-count: 1; } }
+</style>
+
+<section class="gallery-page">
+<div class="gallery-container">
+
+    <div class="gallery-header">
+        <h1>Our Gallery</h1>
+        <p>Explore our service centers, facilities, and work environment</p>
+    </div>
+
+    <!-- GALLERY -->
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            <img src="{% static 'images/g1.png' %}" data-index="0">
+        </div>
+
+        <div class="gallery-item">
+            <img src="{% static 'images/g2.jpg' %}" data-index="1">
+        </div>
+
+        <div class="gallery-item">
+            <img src="{% static 'images/g3.jpg' %}" data-index="2">
+        </div>
+
+        <div class="gallery-item">
+            <img src="{% static 'images/g4.jpg' %}" data-index="3">
+        </div>
+
+        <div class="gallery-item">
+            <img src="{% static 'images/g5.jpg' %}" data-index="4">
+        </div>
+
+        <div class="gallery-item">
+            <img src="{% static 'images/g6.jpg' %}" data-index="5">
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <span class="lightbox-nav prev">&#10094;</span>
+
+    <img id="lightbox-img" src="">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+
+    <span class="lightbox-nav next">&#10095;</span>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const images = document.querySelectorAll(".gallery-item img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const caption = document.getElementById("lightbox-caption");
+    const closeBtn = document.querySelector(".lightbox-close");
+    const nextBtn = document.querySelector(".lightbox-nav.next");
+    const prevBtn = document.querySelector(".lightbox-nav.prev");
+
+    let currentIndex = 0;
+    const total = images.length;
+
+    function openLightbox(index) {
+        currentIndex = index;
+        updateLightbox();
+        lightbox.classList.add("show");
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove("show");
+    }
+
+    function updateLightbox() {
+        lightboxImg.src = images[currentIndex].src;
+        caption.textContent = `Image ${currentIndex + 1} / ${total}`;
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % total;
+        updateLightbox();
+    }
+
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + total) % total;
+        updateLightbox();
+    }
+
+    images.forEach((img, index) => {
+        img.addEventListener("click", () => openLightbox(index));
+    });
+
+    closeBtn.onclick = closeLightbox;
+    nextBtn.onclick = nextImage;
+    prevBtn.onclick = prevImage;
+
+    document.addEventListener("keydown", e => {
+        if (!lightbox.classList.contains("show")) return;
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowRight") nextImage();
+        if (e.key === "ArrowLeft") prevImage();
+    });
+});
+</script>
+
+{% endblock %}

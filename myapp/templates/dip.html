@@ -1,0 +1,330 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Car Dip Color Services | Elegant Way Auto Maint{% endblock %}
+
+{% block content %}
+<style>
+
+.service-hero {
+    height: 350px;
+    background: url("{% static 'images/dip.png' %}") center/cover no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    color: #ddd;
+}
+
+.breadcrumb a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.service-detail {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.service-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+
+
+.service-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.service-subtitle {
+    font-size: 18px;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+
+.service-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 18px;
+}
+
+.service-content h3 {
+    font-size: 24px;
+    margin-top: 45px;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--primary);
+    padding-left: 12px;
+    color: #111;
+}
+
+
+.service-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-content ul li {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 12px;
+}
+
+.service-content ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+
+.service-cta {
+    margin-top: 40px;
+    padding: 30px;
+    background: #f8f8f8;
+    border-left: 4px solid var(--primary);
+    margin-bottom: 50px;
+}
+
+.service-cta h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.service-cta a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 30px;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+/* RIGHT SIDE */
+.service-image {
+    position: sticky;
+    top: 120px;
+}
+
+.service-image img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.image-caption {
+    text-align: center;
+    margin: 12px 0 25px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* QUICK BOX */
+.quick-box {
+    margin-bottom: 30px;
+}
+
+.quick-box h4 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    padding-left: 12px;
+    border-left: 4px solid var(--primary);
+}
+
+.quick-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-box ul li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+}
+
+.quick-box ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+    .service-image {
+        position: static;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+}
+</style>
+
+<!-- ================= HERO ================= -->
+<section class="service-hero">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h1>Car Dip Color Services</h1>
+            <p>Peelable paint solutions for a bold & protected finish</p>
+            <div class="breadcrumb">
+                <a href="{% url 'index' %}">Home</a> /
+                <a href="{% url 'services' %}">Services</a> /
+                <span>Car Dip Color</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SERVICE DETAIL ================= -->
+<section class="service-detail">
+    <div class="service-container">
+        <div class="service-grid">
+
+            <!-- LEFT -->
+            <div class="service-content">
+
+                <h1 class="service-title">
+                    Most Affordable Car Dip Color Services in the UAE
+                </h1>
+
+                <div class="service-subtitle">
+                    Peelable car paint with premium finish & long-lasting protection
+                </div>
+
+                <p>
+                    Looking for a reliable paint & body shop for car dip color services?
+                    <strong>Elegant Way Auto Maint</strong> delivers professional car dip
+                    color services in  Sharjah & Abu Dhabi with flawless application and durability.
+                </p>
+
+                <p>
+                    Our experienced technicians use high-quality peelable car paint to give your
+                    vehicle a unique appearance while protecting the original paint underneath.
+                </p>
+
+                <h3>Why Choose Us for Car Dip Color?</h3>
+                <ul>
+                    <li>Leading paint & body shop in  Sharjah </li>
+                    <li>Highly experienced technicians</li>
+                    <li>Advanced tools & professional spray techniques</li>
+                    <li>Wide range of customization options</li>
+                </ul>
+
+                <h3>What Are Car Dip Color Services?</h3>
+                <p>
+                    Car dip color is a modern alternative to vinyl wrapping and traditional painting.
+                    It enhances your vehicle’s appearance while protecting it from abrasions,
+                    scratches, and environmental damage.
+                </p>
+
+                <p>
+                    The dip coating is a genuine spray without glue or residue, making it extremely
+                    easy to peel off whenever you want to restore the original paint.
+                </p>
+
+                <ul>
+                    <li>No damage to original paint</li>
+                    <li>Easy to remove & maintain</li>
+                    <li>Highly customizable colors & finishes</li>
+                    <li>Clean peel-off without residue</li>
+                </ul>
+
+                <h3>How Long Does Car Dip Color Last?</h3>
+                <p>
+                    When professionally applied with the correct number of coating layers,
+                    car dip color typically lasts between <strong>3 to 5 years</strong>.
+                    It is highly durable and retains its protective properties for years,
+                    making it a smart and affordable investment.
+                </p>
+
+            </div>
+
+            <!-- RIGHT -->
+            <div class="service-image">
+                <img src="{% static 'images/g32.png' %}" alt="Car Dip Color Service">
+                <div class="image-caption">
+                    Custom peelable paint with premium finish
+                </div>
+
+                <div class="quick-box">
+                    <h4>Why Car Dip Color?</h4>
+                    <ul>
+                        <li>Affordable paint alternative</li>
+                        <li>Fully reversible coating</li>
+                        <li>Paint protection included</li>
+                        <li>Custom colors & finishes</li>
+                    </ul>
+                </div>
+
+                <div class="quick-box">
+                    <h4>Service Highlights</h4>
+                    <ul>
+                        <li>Professional spray application</li>
+                        <li>Long-lasting durability</li>
+                        <li>No glue or residue</li>
+                        <li>Factory-grade finish</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="service-cta-wrapper">
+                    <div class="service-container">
+                        <div class="service-cta">
+                            <h4>Transform Your Car with Dip Color</h4>
+                            <p>Get a bold new look while protecting your original paint.</p>
+                            <a href="{% url 'home' %}#book-for-appointment">Book An Appointment</a>
+                        </div>
+                    </div>
+                </section>
+
+{% endblock %}

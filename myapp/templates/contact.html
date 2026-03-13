@@ -1,0 +1,222 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact Us | Elegant Way Auto Maint{% endblock %}
+
+{% block content %}
+<style>
+
+
+    :root {
+    --primary: #ff6a00;     
+    --black: #111111;       
+    --dark: #1a1a1a;       
+    --white: #ffffff;
+    --gray: #bbbbbb;
+}
+
+
+    .contact-page {
+        font-family: 'Poppins', sans-serif;
+        padding: 60px 20px;
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+
+    .contact-header {
+        text-align: center;
+        margin-bottom: 45px;
+    }
+
+    .contact-header h1 {
+        font-size: 38px;
+        color: var(--primary);
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+
+    .contact-header p {
+        font-size: 16px;
+        color: var(--gray);
+    }
+
+
+    .contact-wrapper {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+
+    .contact-maps {
+        flex: 1 1 520px;
+    }
+
+    .contact-maps h2 {
+        font-size: 20px;
+        color: var(--primary);
+        margin: 20px 0 12px;
+    }
+
+    .contact-maps iframe {
+        width: 100%;
+        height: 560px;
+        border: 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(255,106,0,0.25);
+    }
+
+
+    .contact-right {
+        flex: 1 1 420px;
+        background: #212020;
+        padding: 30px;
+        border-radius: 14px;
+        box-shadow: 0 6px 20px rgba(255,106,0,0.15);
+    }
+
+
+    .quick-contact {
+        background: #1f1f1f;
+        border-left: 4px solid var(--primary);
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 25px;
+    }
+
+    .quick-contact p {
+        font-size: 14px;
+        color: var(--gray);
+        margin-bottom: 8px;
+    }
+
+    .quick-contact a {
+        display: inline-block;
+        margin-right: 15px;
+        color: var(--primary);
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+
+    .contact-right h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
+        color: var(--primary);
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px;
+        border: 1px solid #333;
+        background: #1c1c1c;
+        color: var(--white);
+        border-radius: 8px;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 8px rgba(255,106,0,0.5);
+        outline: none;
+    }
+
+    .contact-form button {
+        background: var(--primary);
+        color: var(--white);
+        border: none;
+        padding: 14px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+        background: #e65c00;
+    }
+
+
+    .business-info {
+        margin-top: 25px;
+        font-size: 14px;
+        color: var(--gray);
+    }
+
+    .business-info p {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 6px;
+    }
+
+    .business-info i {
+        color: var(--primary);
+    }
+
+
+</style>
+
+<section class="contact-page">
+
+  <!-- HEADER -->
+  <div class="contact-header">
+    <h1>Contact Us</h1>
+    <p>Need car service, repair, or a quick quote? Get in touch with our experts.</p>
+  </div>
+
+  <div class="contact-wrapper">
+
+    <!-- LEFT: MAPS -->
+    <div class="contact-maps">
+      <h2>Elegant Way Auto Maint-Sharjah</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7215.100553677882!2d55.43255443519591!3d25.285709683639475!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5fc1d346aae3%3A0x1dca4f6d86792f26!2sElegantway%20Auto%20Maintenance!5e0!3m2!1sen!2sin!4v1770008817368!5m2!1sen!2sin">
+      </iframe> 
+    </div>
+
+    <!-- RIGHT: CONTACT -->
+    <div class="contact-right">
+
+      <!-- QUICK CONTACT -->
+      <div class="quick-contact">
+        <p><strong>For faster service:</strong></p>
+        <a href="tel:600579477">📞 Call: 6005 79477</a>
+        <a href="https://wa.me/971600579477" target="_blank">💬 WhatsApp Us</a>
+      </div>
+
+      <h3>Send Us a Message</h3>
+
+<form method="post" class="contact-form">
+    {% csrf_token %}
+
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="tel" name="phone" placeholder="Phone Number">
+
+    <textarea name="message" rows="5" placeholder="How can we help you?"></textarea>
+
+    <button type="submit">Submit Inquiry</button>
+</form>
+
+
+      <!-- BUSINESS INFO -->
+      <div class="business-info">
+        <p><i class="fa-solid fa-envelope"></i> hello@elegantauto.ae</p>
+        <p><i class="fa-solid fa-location-dot"></i> 7CPM+RF Sharjah - United Arab Emirates</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+{% endblock %}

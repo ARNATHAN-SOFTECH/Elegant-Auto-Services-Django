@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Electric Car Repair & Service | Elegant Way Auto Maint{% endblock %}
+
+{% block extra_css %}
+<style>
+    
+    .hero-banner {
+        height: 350px;
+        width: 100%;
+        background-image: url("{% static 'images/services20.jpg' %}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    
+    .repair-section {
+        background-color: #000000; 
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 60px 0;
+    }
+
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .main-title {
+        color: #FF8C00;
+        font-size: 2.0rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 40px;
+        border-bottom: 3px solid #FF8C00;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+
+    .sub-heading {
+        color: #FF8C00;
+        font-size: 1.8rem;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+  
+.content-wrapper {
+    display: flex;
+    align-items: center; 
+    gap: 30px;           
+    margin-bottom: 40px;
+}
+
+
+.text-content {
+    flex: 2; 
+}
+
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 150%;        
+    max-width: 400px;  
+    height: auto;
+    border: 2px solid #FF8C00;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.2);
+}
+
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; 
+    }
+    
+    .image-container img {
+        max-width: 100%;
+    }
+}
+    
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .service-card {
+        background: #1a1a1a;
+        padding: 25px;
+        border-left: 5px solid #FF8C00;
+        transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        background: #252525;
+    }
+
+    .service-card h4 {
+        color: #FF8C00;
+        margin-top: 0;
+        font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+        .content-wrapper {
+            flex-direction: column;
+        }
+        .main-title {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="hero-banner"></div>
+
+<section class="repair-section">
+    <div class="container">
+        <div style="text-align: center;">
+            <h1 class="main-title">get in touch with best electric car service Providers</h1>
+            <p style="font-size: 1.2rem; color: #ebaf41; margin-bottom: 30px;">Extensive electric car service providers</p>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="text-content">
+                <p>Electric cars are rapidly gaining popularity for their efficiency, eco-friendly performance, and simple, cost-effective maintenance. With the growing number of electric vehicles across the UAE, Elegant Auto Repair & Service has emerged as a trusted name for professional electric car servicing in Sharjah. Backed by over 18 years of automotive expertise, our technicians are specially trained to handle the unique technology of electric vehicles, ensuring your car receives expert care with precision and confidence.</p><br>
+                <p>At Elegant Auto Repair & Service, we offer a hassle-free, dealership-level electric car maintenance experience without the premium price tag. Our EV specialists thoroughly inspect and maintain the three most critical components of your electric vehicle — the battery, charging system, and electric motors — ensuring optimal performance, safety, and longevity. Trust Elegant Auto Repair & Service for reliable, efficient, and future-ready electric car care in Sharjah.</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/services19.jpg' %}" alt="Electric Car Service Sharjah">
+            </div>
+        </div>
+
+        <h3 class="sub-heading">OUR WIDE RANGE OF ELECTRIC CAR MAINTENANCE & SERVICING</h3>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h4>Wheel Alignment</h4>
+                <p>Similar to fuel cars, constant wheel alignment in electric cars gives you a smoother ride and increases the lifespan of tyres.</p>
+            </div>
+            <div class="service-card">
+                <h4>Electric car battery maintenance</h4>
+                <p>Electric batteries have an increased lifespan when properly maintained. For cars that travel little distance between recharges, Consult an electric vehicle specialist.</p>
+            </div>
+            <div class="service-card">
+                <h4>Electric motor inspection</h4>
+                <p>Our specialized electric vehicle technicians ensure that motors run in their prime condition every time.</p>
+            </div>
+            <div class="service-card">
+                <h4>Suspension maintenance</h4>
+                <p>Suspension and steering components should be checked periodically for the issues caused by the constant usage.</p>
+            </div>
+            <div class="service-card">
+                <h4>Wheel Upgrades and Customization</h4>
+                <p>Choose from a variety of premium wheels to elevate your car’s style. From alloy designs to luxury finishes, we offer it all.</p>
+            </div>
+            <div class="service-card">
+                <h4>Air Conditioning system</h4>
+                <p>The refrigerant level and the air filters need to be checked at eerie maintenance schedule and should be replaced if necessary.</p>
+            </div>
+            <div class="service-card">
+                <h4>Tyre rotation & pressure check</h4>
+                <p>Even in Electric cars with constant usage tyre gets worn out, so it is important to get them rotated regularly and correct pressure maintenance should be ensured.</p>
+            </div>
+            <div class="service-card">
+                <h4>Inspecting brake components & brake fluid change</h4>
+                <p>EV also needs certain parts like Brake pads, discs & brake fluids constantly checked and replaced.</p>
+            </div>
+            <div class="service-card">
+                <h4>Windscreen and wiper replacement</h4>
+                <p>Windscreen glasses and wiper blades may get damaged over time so they must be regularly serviced.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

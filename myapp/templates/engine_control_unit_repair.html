@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Best Luxury Car Engine Control Unit Repair & Service Center Sharjah {% endblock %}
+
+{% block extra_css %}
+<style>
+    
+    
+    .hero-banner {
+        height: 350px;
+        width: 100%;
+        background-image: url("{% static 'images/services5.jpg' %}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+   
+    .repair-section {
+        background-color: #000000; 
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 60px 0;
+    }
+
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .main-title {
+        color: #FF8C00; 
+        font-size: 2.0rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 40px;
+        border-bottom: 3px solid #FF8C00;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .text-content {
+        flex: 1;
+        min-width: 300px;
+        line-height: 1.8;
+    }
+
+    .text-content p {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+    }
+
+    .image-container {
+        flex: 1;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        border: 2px solid #FF8C00;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(255, 140, 0, 0.2);
+    }
+
+    .bottom-content p {
+        margin-bottom: 20px;
+    }
+
+    .cta-text {
+        font-weight: bold;
+        color: #ff8533; 
+        font-size: 1.1rem;
+        margin-top: 30px;
+    }
+
+    /* Original Mobile adjustments */
+    @media (max-width: 768px) {
+        .content-wrapper {
+            flex-direction: column;
+        }
+        .main-title {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="hero-banner"></div>
+
+<section class="repair-section">
+    <div class="container">
+        <h1 class="main-title">Best Luxury Car Engine Control Unit Repair & Service Center Sharjah</h1>
+
+        <div class="content-wrapper">
+            <div class="text-content">
+                <p>Do you know, your car’s control unit ensures your safety and comfort? It combines a variety of functions to provide the same when driving. At Elegant we understand that they are the basis of the vehicle’s electronics and combine a plethora of safety and comfort functions for a wide range of applications.</p>
+                <p>Your car’s locking system, power windows, vehicle roof are all part of the control unit. Not just these, but your car’s engine, and electronics are all control units. A failure of any of the control units can bring your car to a standstill and make you spend a fortune to get it repaired. Visit Elegant & get proper examination done since we understand how important it is to take care of your car’s control unit</p>
+                <p>Symptoms of a faulty control unit (ECU) include a Check Engine Light that stays on even after resetting, engine stalling without warning, intermittent starting problems, loss of spark or fuel injection, excessive fuel consumption, and loss of communication with diagnostic scanners. Issues may also arise after reverse-polarity jump starting, overheating, broken ECU pins, or visible water/fire damage, often accompanied by checksum memory errors and erratic engine behavior.</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/services6.png' %}" alt="ECU Diagnostic Tool">
+            </div>
+        </div>
+
+        <div class="bottom-content">
+            <p>Our expert team at Elegant have years of experience and working on each and every part of your car. Your car means your life to you, we understand that and hence take very good care of it. When your car’s control unit is faulty or damaged, it can be a tedious task to identify the issues. We have our dedicated team who work tirelessly to identify issues and bring the desired results. Hence, if you have observed any fault in your car’s control unit, get it tested at Elegant. Our expert hands and modern techniques shall bring results like none of our counterparts in Sharjah.</p>
+            
+            <p class="cta-text">Get an appointment booked immediately with Elegant to get the testing and diagnosis done as soon as possible.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

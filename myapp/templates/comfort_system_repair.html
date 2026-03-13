@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Comfort System Service Center | Elegant Auto Repair{% endblock %}
+
+{% block extra_css %}
+<style>
+    
+    .hero-banner {
+        height: 350px;
+        width: 100%;
+        background-image: url("{% static 'images/services3.jpg' %}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    
+    .repair-section {
+        background-color: #000000; 
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 60px 0;
+    }
+
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .main-title {
+        color: #FF8C00;
+        font-size: 2.0rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 40px;
+        border-bottom: 3px solid #FF8C00;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .text-content {
+        flex: 1;
+        min-width: 300px;
+        line-height: 1.8;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        border: 2px solid #FF8C00;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(255, 140, 0, 0.2);
+    }
+
+    .bottom-content p {
+        margin-bottom: 20px;
+    }
+
+    .cta-text {
+        font-weight: bold;
+        color: #ff8533; 
+        font-size: 1.1rem;
+        margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+        .content-wrapper {
+            flex-direction: column;
+        }
+        .main-title {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="hero-banner"></div>
+
+<section class="repair-section">
+    <div class="container">
+        <h1 class="main-title">Luxury Car Comfort system Service Center – Automotive & Technology, Interior Accessories</h1>
+
+        <div class="content-wrapper"> 
+            <div class="text-content">
+                <p>Dubai is well known for its Luxury & comfortable rides and highly equipped cars that ensures comfort to the drivers.</p>
+                <p>Most of the people in Dubai change their car due to the comfort system failure because, for them, comfort is everything. Sure, you must have bought your car to drive it from one place to another but with ease and comfort. And when comfort is a subjective matter for you, it becomes necessary to take care of all the comfort systems of your car. Radio, navigation system, temperature control system, battery sensor, etc. are just a few examples of the car comfort system. All these parts of the car make the drives extremely comfortable, gives pleasure during the long drives.</p>
+
+                <p>You obviously want to stay cool in summers or want your car seat to move backward and forward just in a single touch of a button. Therefore, it is evident that when you don’t feel comfortable in your car, its time to get the servicing done.</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/services4.png' %}" alt="Diagnostic Tool">
+            </div>
+        </div> 
+
+        <div class="bottom-content">
+            <p><strong style="color: #e18719;">How to get the servicing done?</strong></p>
+            <p>For an individual, with no knowledge of the car and its part, it becomes impossible to self-service the comfort system. Therefore, he needs an expert’s service. If you are also one of them, you can directly contact us and make the appointment. Our experts at Elegant are available to hear from you and provide you with the best service packages at the most affordable rates.</p>
+
+            <p>At Elegant our technicians do elaborative testing of your car’s comfort system. And with the most innovative tools and techniques, bring the necessary changes. They will fix all the issues and leave your car as new as it was. Hence book an appointment today and get your car’s comfort system serviced with us.</p>
+
+            <p class="cta-text">Get an appointment booked immediately with Elegant to get the testing and diagnosis done as soon as possible.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Touchless Wheel Alignment | Elegant Way Auto Sharjah{% endblock %}
+
+{% block extra_css %}
+<style>
+   
+    .hero-banner {
+        height: 350px;
+        width: 100%;
+        background-image: url("{% static 'images/services9.jpg' %}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .repair-section {
+        background-color: #000000; 
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 60px 0;
+    }
+
+    .repair-container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .main-title {
+        color: #FF8C00;
+        font-size: 2.0rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 40px;
+        border-bottom: 3px solid #FF8C00;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .text-content {
+        flex: 1;
+        min-width: 300px;
+        line-height: 1.8;
+    }
+
+    .text-content p {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+    }
+
+    .image-container {
+        flex: 1;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        border: 2px solid #FF8C00;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(255, 140, 0, 0.2);
+    }
+
+    .cta-text {
+        font-weight: bold;
+        color: #ff8533; 
+        font-size: 1.1rem;
+        margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+        .content-wrapper {
+            flex-direction: column;
+        }
+        .main-title {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+    <div class="hero-banner"></div>
+
+    <section class="repair-section">
+        <div class="repair-container">
+            <div style="text-align: center;">
+                <h1 class="main-title">Touchless Wheel Alignment System | Sharjah </h1>
+            </div>
+
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <p>Have you ever thought of a touchless wheel alignment system that can quickly measure your car wheel’s alignment without any set-up time? You also don’t need to leave your car for an alignment check even for an hour.</p>
+                    
+                    <p>With a touchless wheel alignment system, a quick diagnosis is possible just in a few seconds. Yes! It’s true. Now you can get your car’s alignment tested at Elegant Way Auto Maint.</p>
+                    
+                    <p>At Elegant, our technicians position your vehicle precisely between advanced sensor heads to measure wheel alignment with exceptional accuracy. Using infrared laser projectors combined with built-in two-megapixel cameras in each sensor head, the system captures real-time data and delivers exact alignment results without physical contact, ensuring faster, safer, and highly reliable diagnostics.</p>
+                </div>
+                <div class="image-container">
+                    <img src="{% static 'images/services10.png' %}" alt="Touchless Wheel Alignment Diagnostic Tool">
+                </div>
+            </div>
+
+            <div class="bottom-content">
+                <p>By avoiding physical contact with the rims, we eliminate any risk of scratches or damage to your wheels. This state-of-the-art technology is ideal for luxury cars with specialized wheel designs. The system captures real-time data and delivers exact alignment results, ensuring faster, safer, and highly reliable diagnostics.</p>
+                <p class="cta-text">Get an appointment booked immediately with Elegant to get the testing and diagnosis done as soon as possible.</p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

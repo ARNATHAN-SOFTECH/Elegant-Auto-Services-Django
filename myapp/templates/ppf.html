@@ -1,0 +1,371 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}PPF Installation | Elegant Way Auto Maint{% endblock %}
+
+{% block content %}
+<style>
+
+
+:root {
+    --primary: #ff6a00;   
+    --black: #111111;     
+    --dark: #1a1a1a;      
+    --white: #ffffff;
+    --gray: #bbbbbb;
+}
+
+
+.service-hero {
+    height: 350px;
+    background: url("{% static 'images/ac.png' %}") center/cover no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: rgba(0,0,0,0.65);
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    color: var(--white);
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--gray);
+}
+
+.breadcrumb {
+    font-size: 14px;
+    color: var(--gray);
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    gap: 8px;   
+}
+
+.breadcrumb a {
+    color: var(--gray);
+    text-decoration: none;
+}
+
+
+
+
+.breadcrumb a:hover {
+    color: #e3520e;
+}
+
+.service-detail {
+    padding: 80px 0;
+    background: var(--black);
+}
+
+.service-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+
+
+.service-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.service-subtitle {
+    font-size: 18px;
+    font-style: italic;
+    color: var(--gray);
+    margin-bottom: 25px;
+}
+
+
+.service-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--gray);
+    margin-bottom: 18px;
+}
+
+.service-content h3 {
+    font-size: 24px;
+    margin-top: 45px;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--primary);
+    padding-left: 12px;
+    color: var(--white);
+}
+
+
+
+
+
+.service-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.service-content ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    color: var(--gray);
+}
+
+.service-content ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+
+.service-image {
+    position: sticky;
+    top: 120px;
+}
+
+.service-image img {
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(255,106,0,0.25);
+    border-radius: 6px;
+}
+
+.image-caption {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--gray);
+}
+
+
+.service-quick-points {
+    margin-top: 20px;
+    padding: 20px;
+    background: var(--dark);
+    box-shadow: 0 10px 30px rgba(255,106,0,0.15);
+}
+
+.service-quick-points h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--primary);
+    padding-left: 12px;
+    color: var(--white);
+}
+
+.service-quick-points ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-quick-points ul li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    color: var(--gray);
+}
+
+.service-quick-points ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+
+.service-cta-wrapper {
+    background: var(--black);
+    padding: 60px 0;
+}
+
+.service-cta {
+    padding: 30px;
+    border-left: 4px solid var(--primary);
+    background: var(--dark);
+}
+
+
+.service-cta p{
+   color: #696663;;
+}
+
+.service-cta h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.service-cta a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 30px;
+    background: var(--primary);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.service-cta a:hover {
+    background: #e65c00;
+}
+
+
+@media (max-width: 900px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-image {
+        position: static;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+}
+
+</style>
+
+
+<section class="service-hero">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h1>Paint Protection Film Installation</h1>
+            <p>Premium PPF solutions to protect your car’s paint in UAE</p>
+            <div class="breadcrumb">
+                <a href="{% url 'index' %}">Home</a> /
+                <a href="{% url 'services' %}">Services</a> /
+                <span>Paint Protection Film</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="service-detail">
+    <div class="service-container">
+        <div class="service-grid">
+
+            <!-- LEFT -->
+            <div class="service-content">
+
+                <h1 class="service-title">
+                    Reliable Paint Protection Film Installation in  Sharjah
+                </h1>
+
+                <div class="service-subtitle">
+                    Protect your vehicle’s paint with expert-installed premium PPF
+                </div>
+
+                <p>
+                    Looking for the best way to protect your car’s exterior?
+                    <strong>Elegant Way Auto Maint</strong> offers professional
+                    paint protection film installation across the UAE using
+                    high-quality materials and expert craftsmanship.
+                </p>
+
+                <p>
+                    Our experienced technicians apply premium PPF to safeguard your
+                    vehicle from scratches, dents, swirl marks, stone chips, and
+                    environmental damage while preserving its original shine and gloss.
+                </p>
+
+              
+
+                <h3>Why is Paint Protection Film Important?</h3>
+                <p>
+                    The primary purpose of PPF is to protect your vehicle’s paintwork
+                    from damage. With self-healing technology and an invisible finish,
+                    PPF keeps your car looking new for years while enhancing resale value.
+                </p>
+
+                <h3>PPF Installation Made Easy in  Sharjah</h3>
+                <p>
+                    We aim to deliver premium paint protection solutions within a short
+                    turnaround time. Car owners across the UAE trust Elegant Way Auto Maint for our quality workmanship and customer satisfaction.
+                </p>
+
+                <ul>
+                    <li>Usage of top-grade PPF materials</li>
+                    <li>Fast & precise installation by experts</li>
+                    <li>Budget-friendly pricing</li>
+                    <li>100% customer satisfaction guaranteed</li>
+                </ul>
+
+
+            </div>
+
+            <!-- RIGHT -->
+            <div class="service-image">
+                <img src="{% static 'images/g29.png' %}" alt="Paint Protection Film Installation">
+                <div class="image-caption">
+                    Premium protection for long-lasting paint finish
+                </div>
+
+                <div class="service-quick-points">
+                    <h4>Why Customers Choose Us</h4>
+                    <ul>
+                        <li>Luxury car specialists</li>
+                        <li>High-quality PPF materials</li>
+                        <li>Expert installation</li>
+                        <li>Trusted across UAE</li>
+                    </ul>
+                </div>
+
+                <div class="service-quick-points">
+                    <h4>Features of PPF</h4>
+                    <ul>
+                        <li>Self-healing scratch resistance</li>
+                        <li>UV & sun protection</li>
+                        <li>Invisible & seamless appearance</li>
+                        <li>Long-lasting durability</li>
+                        <li>Easy maintenance & cleaning</li>
+                        <li>High resistance to debris & stone chips</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="service-cta-wrapper">
+                    <div class="service-container">
+                        <div class="service-cta">
+                            <h4>Book Your Paint Protection Film Installation Today</h4>
+                            <p> Preserve your car’s paint, shine & value with our premium
+                        PPF installation services.</p>
+                            <a href="{% url 'home' %}#book-for-appointment">Book An Appointment</a>
+                        </div>
+                    </div>
+                </section>
+
+{% endblock %}

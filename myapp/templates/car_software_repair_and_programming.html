@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Car Software Repair & Programming | Elegant Way Auto Maint{% endblock %}
+
+{% block extra_css %}
+<style>
+    
+    .hero-banner {
+        height: 350px;
+        width: 100%;
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("{% static 'images/services1.jpg' %}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .repair-section {
+        background-color: #121212; 
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 60px 0;
+    }
+
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .main-title {
+        color: #FF8C00;
+        font-size: 2.0rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 40px;
+        border-bottom: 3px solid #FF8C00;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .text-content {
+        flex: 1;
+        min-width: 300px;
+        line-height: 1.8;
+    }
+
+    .text-content p {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+    }
+
+    .image-container {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        border: 2px solid #FF8C00;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(255, 140, 0, 0.2);
+    }
+
+    .cta-text {
+        font-weight: bold;
+        color: #ff8533; 
+        font-size: 1.1rem;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        .content-wrapper {
+            flex-direction: column;
+        }
+        .main-title {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="hero-banner"></div>
+
+<section class="repair-section">
+    <div class="container">
+        <div style="text-align: center;">
+            <h1 class="main-title">TRUSTED ADVANCED LUXURY CAR SOFTWARE REPAIR & PROGRAMMING</h1>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="text-content">
+                <p>Have you ever observed that the control units in your car have chip lock or programs specifically designed for your car? You cannot change the control unit from one car to another; therefore, in case there is any failure of these programs, you might have to incur high costs in buying them or programming new control units.</p>
+                
+                <p>Elegant Way Auto Maint understands that it is imperative to keep the software and programming of your car’s control unit up-to-date to ensure peak performance and security.</p>
+
+                <p>The Engine Control Unit (ECU) is the main computer in your car’s engine. If your ECU software is not working well, you might get stranded in the middle of nowhere. To stay safe, it is better to get it diagnosed for any issues before they become major failures.</p>
+            </div>
+
+            <div class="image-container">
+                <img src="{% static 'images/service2.png' %}" alt="Advanced Car Software Diagnostic Tool">
+            </div>
+        </div>
+
+        <div class="bottom-content">
+            <p>If you are not aware of the components and software of the car, it is better to get the diagnosis done by expert professionals. Our technicians are well-versed with software programming for luxury brands and have the necessary OEM tools to fix control unit problems.</p>
+            
+            <p>We ensure that after the repair and servicing, we keep precisely the same functions intact as the car had before the software replacement or update.</p>
+
+            <p class="cta-text">Get an appointment booked immediately with Elegant Way Auto Maint to get your software testing and diagnosis done as soon as possible.</p>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="{% url 'home' %}#book-for-appointment" class="btn-appointment" style="display: inline-block;">Book My Appointment</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

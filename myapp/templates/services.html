@@ -1,0 +1,389 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Services | Elegant Way Auto Maint{% endblock %}
+
+{% block content %}
+
+<style>
+
+:root {
+    --primary: #ff6a00;   
+    --black: #111111;     
+    --dark: #1a1a1a;      
+    --white: #ffffff;
+    --gray: #bbbbbb;
+}
+
+    
+    
+.services-section {
+    padding: 30px 80px;
+    background: var(--black);
+}
+
+
+.section-title {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: var(--primary);
+}
+
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+
+.service-card {
+    background: var(--dark);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(255,106,0,0.15);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255,106,0,0.35);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.service-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+}
+
+.service-content h3 {
+    color: var(--primary);
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.service-content p {
+    font-size: 15px;
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+.read-more {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--white);
+    text-decoration: underline; 
+    margin-top: auto;
+}
+
+.read-more:hover {
+    color: var(--primary);
+}
+
+
+
+</style>
+
+
+
+<section class="services-section">
+    <div class="container">
+        <h2 class="section-title">Services</h2>
+
+        <div class="services-grid">
+
+            <!-- SERVICE CARD 1 -->
+            <div class="service-card">
+                <img src="{% static 'images/g5.jpg' %}" alt="AC Repair">
+                <div class="service-content">
+                    <h3>AC REPAIR</h3>
+                    <p>
+                        Is your car AC working properly? Or,
+                        Do you still feel the heat even after
+                        turning on the car AC?
+                    </p>
+                    <a href="{% url 'ac' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+            <!-- SERVICE CARD 2 -->
+            <div class="service-card">
+                <img src="{% static 'images/g6.jpg' %}" alt="Axle Repair">
+                <div class="service-content">
+                    <h3>AXLE / DRIVESHAFT REPAIR</h3>
+                    <p>
+                        Do you know, four-wheel-drive
+                        refers to cars with two axles
+                        providing torque or power to all
+                        the four wheels or axle ends at the same time?
+                    </p>
+                    <a href="{% url 'axle' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+            <!-- SERVICE CARD 3 -->
+            <div class="service-card">
+                <img src="{% static 'images/g7.png' %}" alt="Brake Repair">
+                <div class="service-content">
+                    <h3>BRAKE REPAIR</h3>
+                    <p>
+                        Did you know, that your vehicle
+                        brakes are the most caring
+                        requirement that ensures the safety
+                        of you & your loved ones?
+                    </p>
+                    <a href="{% url 'brake' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+            <!-- SERVICE CARD 4 -->
+            <div class="service-card">
+                <img src="{% static 'images/g8.png' %}" alt="Calibration">
+                <div class="service-content">
+                    <h3>CAMERA / RADAR CALIBRATION</h3>
+                    <p>
+                        Do you know, your drive can be
+                        more comfortable if you have all the
+                        car calibration and radar at the right place?
+                    </p>
+                    <a href="{% url 'camera' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+            <!-- SERVICE CARD 5 -->
+            <div class="service-card">
+                <img src="{% static 'images/g9.png' %}" alt="Software Repair">
+                <div class="service-content">
+                    <h3>Car Software Repair & Programming</h3>
+                    <p>
+                        Have you ever observed that the control units in your car have chip lock or programs specifically designed for your car?
+                    </p>
+                    <a href="{% url 'software' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+            <!-- SERVICE CARD 6 -->
+            <div class="service-card">
+                <img src="{% static 'images/g10.png' %}" alt="system Repair">
+                <div class="service-content">
+                    <h3>Comfort System Repair</h3>
+                    <p>
+                         Sharjah is well known for its Luxury & comfortable rides and highly equipped cars that ensures comfort to the drivers.
+                    </p>
+                    <a href="{% url 'comfort_system_repair' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+            <!-- SERVICE CARD 7 -->
+            <div class="service-card">
+                <img src="{% static 'images/g11.png' %}" alt="Engine Repair">
+                <div class="service-content">
+                    <h3>Engine Control Unit Repair</h3>
+                    <p>
+                        Do you know, your car’s control unit ensures your safety and comfort?
+                    </p>
+                    <a href="{% url 'engine_control_unit_repair' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+            <!-- SERVICE CARD 8 -->
+            <div class="service-card">
+                <img src="{% static 'images/g12.png' %}" alt="Cooling Repair">
+                <div class="service-content">
+                    <h3>Engine Cooling System Repair</h3>
+                    <p>
+                        Did you know that engine overheating is one of the most common problems on the roads of  Sharjah?
+                    </p>
+                    <a href="{% url 'cooling' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+            <!-- SERVICE CARD 9 -->
+            <div class="service-card">
+                <img src="{% static 'images/g13.png' %}" alt="Engine Repair">
+                <div class="service-content">
+                    <h3>Engine Management System Repair</h3>
+                    <p>
+                        Do you know that the engine management system is the most vital part of your car?
+                    </p>
+                    <a href="{% url 'management' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+            <!-- SERVICE CARD 10 -->
+            <div class="service-card">
+                <img src="{% static 'images/g14.png' %}" alt="Gearbox Repair">
+                <div class="service-content">
+                    <h3>Gearbox repair</h3>
+                    <p>
+                        Do you know that the gearbox is the second most essential part of the car?
+                    </p>
+                    <a href="{% url 'gearbox' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+            <!-- SERVICE CARD 11 -->
+            <div class="service-card">
+                <img src="{% static 'images/g15.png' %}" alt="Pre-purchase ">
+                <div class="service-content">
+                    <h3>Pre-purchase inspection</h3>
+                    <p>
+                        Do you know that you can save a lot of money and secure your safety if you get a pre-owned car inspected before purchasing it?
+                    </p>
+                    <a href="{% url 'inspection' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+            <!-- SERVICE CARD 12 -->
+            <div class="service-card">
+                <img src="{% static 'images/g16.png' %}" alt="Suspension Repair">
+                <div class="service-content">
+                    <h3>Suspension Repair</h3>
+                    <p>
+                        Do you know your car is completely useless if you are not able to control it? And from where the control comes?
+                    </p>
+                    <a href="{% url 'suspension' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+            <!-- SERVICE CARD 13 -->
+            <div class="service-card">
+                <img src="{% static 'images/g17.png' %}" alt="Wheel Repair">
+                <div class="service-content">
+                    <h3>Touchless wheel alignment</h3>
+                    <p>
+                        Have you ever thought of a touchless wheel alignment system that can quickly measure your car wheel’s alignment                    </p>
+                    <a href="{% url 'touchless_wheel_alignment' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+            <!-- SERVICE CARD 14 -->
+            <div class="service-card">
+                <img src="{% static 'images/g18.png' %}" alt="Transmission Repair">
+                <div class="service-content">
+                    <h3>Transmission Repair</h3>
+                    <p>
+                        Do you know the transmission is one of the most neglected parts of the car?
+                    </p>
+                    <a href="{% url 'transmission_repair' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+            <!-- SERVICE CARD 15 -->
+            <div class="service-card">
+                <img src="{% static 'images/g19.png' %}" alt="Fleet Repair">
+                <div class="service-content">
+                    <h3>Fleet Maintenance</h3>
+                    <p>
+                        Do you know the transmission is one of the most neglected parts of the car?
+                    </p>
+                    <a href="{% url 'fleet_maintenance' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+            <!-- SERVICE CARD 16 -->
+            <div class="service-card">
+                <img src="{% static 'images/g20.png' %}" alt="Major ">
+                <div class="service-content">
+                    <h3>Major Service</h3>
+                    <p>
+                        Major services is a full professional car service as per the manufacturer guidelines with the complete vehicle inspection with any needed repairs & replacements.
+                    </p>
+                    <a href="{% url 'major' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+            <!-- SERVICE CARD 17 -->
+            <div class="service-card">
+                <img src="{% static 'images/g21.png' %}" alt=" Minor">
+                <div class="service-content">
+                    <h3>Minor Service</h3>
+                    <p>
+                        Minor car services do not cost much but have a greater impact on your vehicle’s overall health and keep away major repairs.
+                    </p>
+                    <a href="{% url 'minor' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+            <!-- SERVICE CARD 18 -->
+            <div class="service-card">
+                <img src="{% static 'images/g29.png' %}" alt="Paint Repair">
+                
+                <div class="service-content">
+                    <h3>Paint Protection film</h3>
+                    <p>
+                        PPF installation is essential to cover your car’s exterior and safeguard the paint job
+                    </p>
+                    <a href="{% url 'ppf' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+            <!-- SERVICE CARD 19 -->
+            <div class="service-card">
+                <img src="{% static 'images/g30.png' %}" alt="Brake">
+                <div class="service-content">
+                    <h3>Brake Caliper Painting</h3>
+                    <p>
+                        Brake caliper painting makes your car look smart, fresh and prevents the calipers from rusting.
+                    </p>
+                    <a href="{% url 'caliper' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+            <!-- SERVICE CARD 20 -->
+            <div class="service-card">
+                <img src="{% static 'images/g31.png' %}" alt="Ceramic">
+                <div class="service-content">
+                    <h3>Ceramic Coating</h3>
+                    <p>
+                        Ceramic coating ensures extreme protection to your car surface for scratches, dirt and chemical substances.
+                    </p>
+                    <a href="{% url 'ceramic' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+            <!-- SERVICE CARD 21 -->
+            <div class="service-card">
+                <img src="{% static 'images/g32.png' %}" alt="Color">
+                <div class="service-content">
+                    <h3>Car dip color service</h3>
+                    <p>
+                        Quality dip color paint services when done with greater care provides a unique finish to your vehicle.                    
+                    </p>
+                    <a href="{% url 'dip' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+            <!-- SERVICE CARD 22 -->
+            <div class="service-card">
+                <img src="{% static 'images/g26.png' %}" alt="Tinting">
+                <div class="service-content">
+                    <h3>Car Tinting services</h3>
+                    <p>
+                        A car tinting service enhances the resale value of your vehicle and provides a flawless look.
+                    </p>
+                    <a href="{% url 'tinting' %}" class="read-more">READ MORE</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

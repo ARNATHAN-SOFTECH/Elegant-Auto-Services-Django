@@ -1,0 +1,330 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Car Tinting Services | Elegant Way Auto Maint{% endblock %}
+
+{% block content %}
+<style>
+
+.service-hero {
+    height: 350px;
+    background: url("{% static 'images/g26.png' %}") center/cover no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    color: #ddd;
+}
+
+.breadcrumb a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.service-detail {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.service-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+
+
+.service-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.service-subtitle {
+    font-size: 18px;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+
+.service-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 18px;
+}
+
+.service-content h3 {
+    font-size: 24px;
+    margin-top: 45px;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--primary);
+    padding-left: 12px;
+    color: #111;
+}
+
+
+.service-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-content ul li {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 12px;
+}
+
+.service-content ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+
+.service-cta {
+    margin-top: 40px;
+    padding: 30px;
+    background: #f8f8f8;
+    border-left: 4px solid var(--primary);
+    margin-bottom: 50px;
+}
+
+.service-cta h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.service-cta a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 30px;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+
+.service-image {
+    position: sticky;
+    top: 120px;
+}
+
+.service-image img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.image-caption {
+    text-align: center;
+    margin: 12px 0 25px;
+    font-size: 14px;
+    color: #666;
+}
+
+
+.quick-box {
+    margin-bottom: 30px;
+}
+
+.quick-box h4 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    padding-left: 12px;
+    border-left: 4px solid var(--primary);
+}
+
+.quick-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-box ul li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+}
+
+.quick-box ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+    .service-image {
+        position: static;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+}
+</style>
+
+
+<section class="service-hero">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h1>Car Window Tinting Services</h1>
+            <p>Premium window films for comfort, protection & privacy</p>
+            <div class="breadcrumb">
+                <a href="{% url 'index' %}">Home</a> /
+                <a href="{% url 'services' %}">Services</a> /
+                <span>Car Tinting</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="service-detail">
+    <div class="service-container">
+        <div class="service-grid">
+
+            
+            <div class="service-content">
+
+                <h1 class="service-title">
+                    Extensive Car Tinting Services in  Sharjah
+                </h1>
+
+                <div class="service-subtitle">
+                    High-quality window tinting for comfort, safety & elegance
+                </div>
+
+                <p>
+                    Are you looking for professional car window tinting services in the UAE?
+                    <strong>Elegant Way Auto Maint</strong> delivers premium-quality tinting
+                    solutions designed to protect your car while enhancing comfort and appearance.
+                </p>
+
+                <p>
+                    Our window tinting services use world-class materials to ensure durability,
+                    heat rejection, and long-lasting performance without compromising visibility.
+                </p>
+
+                <h3>Why Choose Elegant Way Auto Maint for Car Tinting?</h3>
+                <ul>
+                    <li>Leading automotive service provider in UAE</li>
+                    <li>Experienced technicians & modern facilities</li>
+                    <li>Nominal pricing with uncompromised quality</li>
+                    <li>100% customer satisfaction guaranteed</li>
+                </ul>
+
+                <p>
+                    Our success in automotive window tinting in  Sharjah is driven by quality,
+                    affordability, and attention to detail.
+                </p>
+
+                <h3>Benefits of Car Window Tinting</h3>
+                <p>
+                    Professionally installed window tint protects against harmful UV and infrared
+                    rays, preventing interior fading and reducing health risks caused by prolonged exposure.
+                </p>
+
+                <ul>
+                    <li>Blocks UV & infrared rays</li>
+                    <li>Reduces heat inside the vehicle</li>
+                    <li>Improves driving comfort</li>
+                    <li>Reduces glare during night driving</li>
+                    <li>Enhances privacy & safety</li>
+                    <li>Protects interior upholstery</li>
+                </ul>
+
+                <h3>Wide Range of Window Film Options</h3>
+                <p>
+                    We offer various window tint options including safety films and decorative films
+                    that add style, protection, and a custom look to your vehicle.
+                </p>
+
+
+            </div>
+
+            
+            <div class="service-image">
+                <img src="{% static 'images/g26.png' %}" alt="Car Window Tinting">
+                <div class="image-caption">
+                    High-quality window films installed by experts
+                </div>
+
+                <div class="quick-box">
+                    <h4>Why Tint Your Car?</h4>
+                    <ul>
+                        <li>Heat & UV protection</li>
+                        <li>Improved comfort</li>
+                        <li>Enhanced privacy</li>
+                        <li>Interior protection</li>
+                    </ul>
+                </div>
+
+                <div class="quick-box">
+                    <h4>Our Tinting Features</h4>
+                    <ul>
+                        <li>World-class tint films</li>
+                        <li>Multiple shade options</li>
+                        <li>Scratch-resistant coating</li>
+                        <li>Long-lasting durability</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="service-cta-wrapper">
+                    <div class="service-container">
+                        <div class="service-cta">
+                            <h4>Get Your Car Window Tint Installed Today</h4>
+                            <p>Experience elegance, protection, and privacy with our premium window tinting services.</p>
+                            <a href="{% url 'home' %}#book-for-appointment">Book An Appointment</a>
+                        </div>
+                    </div>
+                </section>
+
+{% endblock %}
