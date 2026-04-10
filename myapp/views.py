@@ -43,8 +43,6 @@ def electric_car_repair(request):
 def about(request):
     return render(request, 'about.html')
 
-def contact(request):
-    return render(request, 'contact.html')
 
 def services(request):
     return render(request, 'services.html')
@@ -165,7 +163,7 @@ def book_appointment(request):
             return redirect('appointment_success')
     else:
         form = AppointmentForm()
-    return render(request, 'reviews.html', {'form': form})
+    return render(request, 'appointment_success.html', {'form': form})
 
 
 def contact(request):
