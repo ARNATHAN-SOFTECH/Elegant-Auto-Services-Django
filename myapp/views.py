@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, "home.html")
 
 def why_choose_us(request):
     return render(request, 'why_choose_us.html')
