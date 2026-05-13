@@ -144,7 +144,7 @@ def book_appointment(request):
                 admin_subject,
                 admin_message,
                 settings.DEFAULT_FROM_EMAIL,
-                ['ardrapb201@gmail.com'],
+                ['arnathansoftech7@gmail.com'],
                 fail_silently=False,
             )
 
@@ -178,7 +178,7 @@ def contact(request):
                 'New Contact Inquiry',
                 f"New Inquiry:\n\nName: {contact_obj.name}\nEmail: {contact_obj.email}\nMessage: {contact_obj.message}",
                 settings.DEFAULT_FROM_EMAIL,
-                ['ardrapb201@gmail.com'],
+                ['arnathansoftech7@gmail.com'],
                 fail_silently=False,  # 👈 show errors if email fails
             )
 
