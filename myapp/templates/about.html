@@ -95,6 +95,38 @@
     font-size: 35px;
     color: var(--primary);
 }
+/* FAQ Section */
+
+.faq-section {
+    background: var(--black);
+    border-radius: 15px;
+}
+
+.faq-section h2 {
+    color: #ff6600;
+    font-weight: 700;
+}
+
+.accordion-item {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.accordion-button {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-body {
+    background: var(--black);
+    line-height: 1.8;
+    color: var(--light);
+}
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
@@ -161,7 +193,7 @@
         </p>
 
         <p>
-            We have also launched a mobile application for easy service booking.
+            We have also launched a website application for easy service booking.
         </p>
 
         <p>
@@ -253,5 +285,324 @@
         </div>
     </section>
 
+<!-- FAQ Section Start -->
+<section class="faq-section py-5">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Frequently Asked Questions</h2>
+            <p>Your common questions answered here.</p>
+        </div>
+
+        <div class="row">
+
+            <!-- LEFT COLUMN -->
+            <div class="col-lg-6">
+
+                <div class="accordion" id="faqAccordionLeft">
+
+                    <!-- FAQ 1 -->
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq1">
+
+                                What services do you provide?
+
+                            </button>
+                        </h2>
+
+                        <div id="faq1"
+                             class="accordion-collapse collapse"
+                             data-bs-parent="#faqAccordionLeft">
+
+                            <div class="accordion-body">
+                                We provide car repair, diagnostics,
+                                maintenance, detailing, oil changes,
+                                battery replacement, and vehicle washing services.
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq2">
+
+                                Do you service all vehicle brands?
+
+                            </button>
+                        </h2>
+
+                        <div id="faq2"
+                             class="accordion-collapse collapse"
+                             data-bs-parent="#faqAccordionLeft">
+
+                            <div class="accordion-body">
+                                Yes, we service a wide range of vehicle brands
+                                including luxury, sports, and standard models.
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq3">
+
+                                How can I book a service appointment?
+
+                            </button>
+                        </h2>
+
+                        <div id="faq3"
+                             class="accordion-collapse collapse"
+                             data-bs-parent="#faqAccordionLeft">
+
+                            <div class="accordion-body">
+                                You can book appointments through our website
+                                or by contacting our support team.
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq4">
+
+                                How long does vehicle servicing take?
+
+                            </button>
+                        </h2>
+
+                        <div id="faq4"
+                             class="accordion-collapse collapse"
+                             data-bs-parent="#faqAccordionLeft">
+
+                            <div class="accordion-body">
+                                Most standard services are completed within
+                                2 to 4 hours depending on the work required.
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="col-lg-6">
+
+                <div class="accordion" id="faqAccordionRight">
+
+                    <!-- FAQ 5 -->
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq5">
+
+                                Do you use genuine spare parts?
+
+                            </button>
+                        </h2>
+
+                        <div id="faq5"
+                             class="accordion-collapse collapse"
+                             data-bs-parent="#faqAccordionRight">
+
+                            <div class="accordion-body">
+                                Yes, we use genuine and high-quality spare parts
+                                to ensure vehicle safety and performance.
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq6">
+
+                                Is there a warranty on repairs and spare parts?
+
+                            </button>
+                        </h2>
+
+                        <div id="faq6"
+                             class="accordion-collapse collapse"
+                             data-bs-parent="#faqAccordionRight">
+
+                            <div class="accordion-body">
+                                Yes, we provide warranty coverage on selected
+                                repairs and spare parts.
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- FAQ 7 -->
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq7">
+
+                                Do you provide AI-based diagnostics?
+
+                            </button>
+                        </h2>
+
+                        <div id="faq7"
+                             class="accordion-collapse collapse"
+                             data-bs-parent="#faqAccordionRight">
+
+                            <div class="accordion-body">
+                                Yes, we use advanced diagnostic systems and modern
+                                technologies to improve repair accuracy and efficiency.
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- FAQ 8 -->
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq8">
+
+                                Do you support electric vehicles (EVs)?
+
+                            </button>
+                        </h2>
+
+                        <div id="faq8"
+                             class="accordion-collapse collapse"
+                             data-bs-parent="#faqAccordionRight">
+
+                            <div class="accordion-body">
+                                Yes, we provide selected maintenance and support
+                                services for electric vehicles.
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- FAQ Section End -->
+
 </div>
+<!-- FAQ JSON-LD Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+
+    {
+      "@type": "Question",
+      "name": "What services do you provide?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We provide car repair, diagnostics, maintenance, detailing, oil changes, battery replacement, and vehicle washing services."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Do you service all vehicle brands?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we service a wide range of vehicle brands including luxury, sports, and standard models."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "How can I book a service appointment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can book appointments through our website, or by contacting our support team."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "How long does vehicle servicing take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most standard services are completed within 2 to 4 hours depending on the work required."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Do you use genuine spare parts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we use genuine and high-quality spare parts to ensure vehicle safety and performance."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Is there a warranty on repairs and spare parts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we provide warranty coverage on selected repairs and spare parts."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Do you provide AI-based diagnostics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we use advanced diagnostic systems and modern technologies to improve repair accuracy and efficiency."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Do you support electric vehicles (EVs)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we provide selected maintenance and support services for electric vehicles."
+      }
+    }
+
+  ]
+}
+</script>
+
 {% endblock %}
