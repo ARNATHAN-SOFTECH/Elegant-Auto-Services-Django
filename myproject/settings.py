@@ -162,9 +162,6 @@ STORAGES = {
 
 
 
-
-
-
 META_SITE_PROTOCOL = 'http'
 META_SITE_DOMAIN = 'elegantwayauto.com'
 META_USE_SITES = False
