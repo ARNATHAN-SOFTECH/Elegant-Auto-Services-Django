@@ -25,6 +25,54 @@
     <meta property="og:image" content="{% static 'images/logo.png' %}">
     <link rel="canonical" href="{{ request.build_absolute_uri }}">
 
+
+
+
+
+
+    {% load meta %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% include 'meta/meta.html' %}
+
+    <meta name="description" content="Find the best cars, car reviews, electric cars, luxury cars and affordable vehicles.">
+
+    <meta name="keywords" content="cars, electric cars, luxury cars, used cars, car showroom">
+
+    <meta name="author" content="Your Name">
+
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="CarHub">
+    <meta property="og:description" content="Best car website built with Django">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="ai-content-declaration" content="human-created">
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "AutoDealer",
+    "name": "CarHub",
+    "description": "Car showroom website built with Django",
+    "url": "http://127.0.0.1:8000/",
+    "brand": {
+        "@type": "Brand",
+        "name": "CarHub"
+    }
+    }
+    </script>
+
     <!-- google analytics -->
      
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H3NMZE2LE7"></script>

@@ -47,7 +47,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',
+    'meta',
+    'django_json_ld',
+    'django.contrib.sitemaps',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -155,3 +159,24 @@ STORAGES = {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
+
+
+
+
+
+
+META_SITE_PROTOCOL = 'http'
+META_SITE_DOMAIN = '127.0.0.1:8000'
+META_USE_SITES = False
+
+META_SITE_NAME = 'Elegant Autoservices'
+META_DEFAULT_KEYWORDS = [
+    'cars',
+    'car showroom',
+    'used cars',
+    'new cars',
+    'luxury cars',
+    'electric cars'
+]
+
+META_INCLUDE_KEYWORDS = True

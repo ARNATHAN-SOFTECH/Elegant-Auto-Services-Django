@@ -1,13 +1,6 @@
 from django.urls import path
 from . import views
-from .views import book_appointment
 from myapp.views import robots_txt
-from django.contrib.sitemaps.views import sitemap
-from .sitemaps import StaticViewSitemap
-
-sitemaps = {
-    'static': StaticViewSitemap,
-}
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -49,10 +42,7 @@ urlpatterns = [
     path('book-appointment/', views.book_appointment, name='book_appointment'),
     path('appointment-success/', views.appointment_success, name='appointment_success'),
     path('packages/', views.packages, name='packages'),
-    path("robots.txt", robots_txt),
-    
-    # SEO Files
-    path("robots.txt", robots_txt),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
 
+    # robots.txt
+    path("robots.txt", robots_txt),
 ]
