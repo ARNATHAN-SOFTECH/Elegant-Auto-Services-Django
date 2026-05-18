@@ -166,7 +166,7 @@ STORAGES = {
 
 
 META_SITE_PROTOCOL = 'http'
-META_SITE_DOMAIN = '127.0.0.1:8000'
+META_SITE_DOMAIN = 'elegantwayauto.com'
 META_USE_SITES = False
 
 META_SITE_NAME = 'Elegant Autoservices'
