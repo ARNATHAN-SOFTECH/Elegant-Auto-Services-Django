@@ -11,7 +11,7 @@ load_dotenv(os.path.join(BASE_DIR, '.env'))
 # SECURITY
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'elegant-way-auto-maint.onrender.com',
@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
+    'meta',
 
     'myapp',
 ]
