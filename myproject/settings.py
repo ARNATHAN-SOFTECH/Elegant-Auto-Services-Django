@@ -1,7 +1,3 @@
-"""
-Django settings for myproject project.
-"""
-
 from pathlib import Path
 import os
 from dotenv import load_dotenv
@@ -9,7 +5,7 @@ from dotenv import load_dotenv
 # Base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Load environment variables
+# Load .env file
 load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 # SECURITY
@@ -19,11 +15,11 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'elegant-way-auto-maint.onrender.com',
-    '127.0.0.1',
     'localhost',
+    '127.0.0.1',
 ]
 
-# Applications
+# Installed apps
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -77,7 +73,7 @@ DATABASES = {
     }
 }
 
-# Password Validation
+# Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -116,10 +112,10 @@ STORAGES = {
     },
 }
 
-# Default auto field
+# Default primary key field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Email Settings
+# Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
