@@ -51,7 +51,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',
-    'meta',
     'django_json_ld',
     'django.contrib.sitemaps',
 ]
